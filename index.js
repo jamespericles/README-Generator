@@ -7,6 +7,12 @@ const writeFileAsync = util.promisify(fs.writeFile);
 // array of questions for user
 function promptUser() {
   return inquirer.prompt([
+    { type: "input", name: "name", message: "Please enter your name." },
+    {
+      type: "number",
+      name: "year",
+      message: "What year did you complete this project?",
+    },
     {
       type: "input",
       name: "projectTitle",
@@ -54,7 +60,7 @@ function promptUser() {
       type: "input",
       name: "questions",
       message:
-        "Please type what you would like for the <Questions> section of the document.",
+        "Please provide your email for questions related to the project.",
     },
     {
       type: "input",
@@ -66,9 +72,22 @@ function promptUser() {
 }
 
 // function to write README file
-// function writeToFile(fileName, data) {}
 
 function generateREADME(answers) {
+  if (answers.license === "MIT") {
+    answers.license =
+      "MIT License <br/> Copyright (c) `${answers.year} ${answers.name}` <br/> Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: <br/> The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. <br/> THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.";
+  }
+  if (answers.license === "GNU General Public") {
+    answers.license = "";
+  }
+  if (answers.license === "Apache") {
+    answers.license = "";
+  }
+  if (answers.license === "None") {
+    answers.license =
+      "Please contact me for information regarding licensing this software.";
+  }
   return `
     #${answers.projectTitle}
     ---
@@ -93,7 +112,7 @@ function generateREADME(answers) {
     ###<a name="Usage"></a>Usage
     ${answers.usage}
     ###<a name="License"></a>License
-    
+    ${answers.license}
     ###<a name="Contributing"></a>Contributing
     ${answers.contributing}
     ###<a name="Tests"></a>Tests
@@ -115,6 +134,8 @@ async function init() {
     await writeFileAsync("README.md", README);
 
     console.log("Successfully wrote to README.md");
+    console.log(answers);
+    console.log(typeof answers.license);
   } catch (err) {
     console.log(err);
   }
