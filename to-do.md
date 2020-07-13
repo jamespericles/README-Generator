@@ -24,3 +24,7 @@ Primary Goals
 - Save walkthrough video to repo
 - Create and save sample README using application
 - Update README for this project to be very detailed
+
+Secondary Goals
+
+- If possible, if user selects none for license or none for screenshots, delete each section respectively
