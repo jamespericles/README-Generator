@@ -16,10 +16,12 @@ function promptUser() {
       type: "input",
       name: "description",
       message: "What is the description of your project?",
-    },{
-        type: "input",
-        name: "screenshots",
-        message: "Please enter any URLs for screenshots relevant to this project, or type <skip>."
+    },
+    {
+      type: "input",
+      name: "screenshots",
+      message:
+        "Please enter any URLs for screenshots relevant to this project, or type <skip>.",
     },
     {
       type: "input",
@@ -91,7 +93,7 @@ function generateREADME(answers) {
     ###<a name="Usage"></a>Usage
     ${answers.usage}
     ###<a name="License"></a>License
-    ${if answers.license == "MIT"}
+    
     ###<a name="Contributing"></a>Contributing
     ${answers.contributing}
     ###<a name="Tests"></a>Tests
