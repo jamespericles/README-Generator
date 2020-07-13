@@ -1,7 +1,15 @@
 Primary Goals
 
 - Provide video of node index.js command working
-- Generated README includes name of project and following sections - Description - Table of Contents - Installation - Usage - License - Contributing - Tests - Questions
+- Generated README includes name of project and following sections:
+  - Description
+  - Table of Contents
+  - Installation
+  - Usage
+  - License
+  - Contributing
+  - Tests
+  - Questions
 - Entering name of project displays it as the title of the README
 - Information inputted for Description, Installation, Usage, Contributing and Testing sections appends properly within README doc
 - Allow for the choice of several licenses
