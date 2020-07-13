@@ -27,12 +27,12 @@ function promptUser() {
       name: "usage",
       message: "How would you describe the usage of your project",
     },
-    //   {
-    //     type: "list",
-    //     name: "license",
-    //     message: "Which License would you like to use?"
-    //     choices: []
-    //   },
+    {
+      type: "list",
+      name: "license",
+      message: "Which License would you like to use?",
+      choices: ["MIT", "GNU General Public", "Apache", "None"],
+    },
     {
       type: "input",
       name: "contributing",
