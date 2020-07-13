@@ -45,7 +45,7 @@ function promptUser() {
       message: "Please describe any tests you conducted and their results.",
     },
     {
-      type: "list",
+      type: "input",
       name: "questions",
       message:
         "Please type what you would like for the <Questions> section of the document.",
