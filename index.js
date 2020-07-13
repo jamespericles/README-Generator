@@ -16,6 +16,10 @@ function promptUser() {
       type: "input",
       name: "description",
       message: "What is the description of your project?",
+    },{
+        type: "input",
+        name: "screenshots",
+        message: "Please enter any URLs for screenshots relevant to this project, or type <skip>."
     },
     {
       type: "input",
@@ -69,6 +73,7 @@ function generateREADME(answers) {
     ##Table of Contents
     ---
     ###[Description](#Description)
+    ###[Screenshots](#Screenshots)
     ###[Installation](#Installation)
     ###[Usage](#Usage)
     ###[License](#License)
@@ -79,12 +84,14 @@ function generateREADME(answers) {
     ---
     ###<a name="Description"></a>Description
     ${answers.description}
+    ###<a name="Screenshots"></a>Screenshots
+    ${answers.screenshots}
     ###<a name="Installation"></a>Installation
     ${answers.installation}
     ###<a name="Usage"></a>Usage
     ${answers.usage}
     ###<a name="License"></a>License
-    
+    ${if answers.license == "MIT"}
     ###<a name="Contributing"></a>Contributing
     ${answers.contributing}
     ###<a name="Tests"></a>Tests
