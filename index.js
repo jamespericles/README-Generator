@@ -35,8 +35,23 @@ function promptUser() {
       },
       {
         type: "input",
-        name: "linkedin",
-        message: "Enter your LinkedIn URL."
+        name: "contributing",
+        message: "Who else contributed to this project? If nobody, type <no>"
+      },
+      {
+        type: "input",
+        name:"tests",
+        message: "Please describe any tests you conducted and their results."  
+      },
+      {
+        type: "list",
+        name:"questions",
+        message:"Please type what you would like for the <Questions> section of the document."
+      },
+      {
+        type: "input",
+        name: "github",
+        message: "Please enter your github username and repository URL for this project."  
       }
     ]);
   }
