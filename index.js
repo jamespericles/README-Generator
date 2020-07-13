@@ -84,7 +84,7 @@ function generateREADME(answers) {
     ###<a name="Usage"></a>Usage
     ${answers.usage}
     ###<a name="License"></a>License
-
+    
     ###<a name="Contributing"></a>Contributing
     ${answers.contributing}
     ###<a name="Tests"></a>Tests
@@ -103,7 +103,7 @@ async function init() {
 
     const README = generateREADME(answers);
 
-    await writeFileAsync("README.md", md);
+    await writeFileAsync("README.md", README);
 
     console.log("Successfully wrote to README.md");
   } catch (err) {
