@@ -36,7 +36,7 @@ function promptUser() {
       {
         type: "input",
         name: "contributing",
-        message: "Who else contributed to this project? If nobody, type <no>"
+        message: "If you would like people to contribute to your work, please explain how they can do that."
       },
       {
         type: "input",
@@ -57,7 +57,25 @@ function promptUser() {
   }
 
 // function to write README file
-function writeToFile(fileName, data) {}
+// function writeToFile(fileName, data) {}
+
+function generateREADME(answers) {
+    return `
+    #${answers.projectTitle}
+    ---
+    ##Table of Contents
+    ---
+    ###[Description](#Description)
+    ###[Installation](#Installation)
+    ###[Usage](#Usage)
+    ###[License](#License)
+    ###[Contributing](#Contributing)
+    ###[Tests](#Tests)
+    ###[Questions](#Questions)
+    ###[Github](#Github)
+    `
+
+}
 
 // function to initialize program
 async function init() {
