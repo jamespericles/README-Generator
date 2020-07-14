@@ -89,37 +89,37 @@ function generateREADME(answers) {
       "Please contact me for information regarding licensing this software.";
   }
   return `
-    #${answers.projectTitle}
+    # ${answers.projectTitle}
     ---
-    ##Table of Contents
+    ## Table of Contents
     ---
-    ###[Description](#Description)
-    ###[Screenshots](#Screenshots)
-    ###[Installation](#Installation)
-    ###[Usage](#Usage)
-    ###[License](#License)
-    ###[Contributing](#Contributing)
-    ###[Tests](#Tests)
-    ###[Questions](#Questions)
-    ###[Github](#Github)
+    ### [Description](#Description)
+    ### [Screenshots](#Screenshots)
+    ### [Installation](#Installation)
+    ### [Usage](#Usage)
+    ### [License](#License)
+    ### [Contributing](#Contributing)
+    ### [Tests](#Tests)
+    ### [Questions](#Questions)
+    ### [Github](#Github)
     ---
-    ###<a name="Description"></a>Description
+    ### <a name="Description"></a>Description
     ${answers.description}
-    ###<a name="Screenshots"></a>Screenshots
+    ### <a name="Screenshots"></a>Screenshots
     ${answers.screenshots}
-    ###<a name="Installation"></a>Installation
+    ### <a name="Installation"></a>Installation
     ${answers.installation}
-    ###<a name="Usage"></a>Usage
+    ### <a name="Usage"></a>Usage
     ${answers.usage}
-    ###<a name="License"></a>License
+    ### <a name="License"></a>License
     ${answers.license}
-    ###<a name="Contributing"></a>Contributing
+    ### <a name="Contributing"></a>Contributing
     ${answers.contributing}
-    ###<a name="Tests"></a>Tests
+    ### <a name="Tests"></a>Tests
     ${answers.tests}
-    ###<a name="Questions"></a>Questions
+    ### <a name="Questions"></a>Questions
     ${answers.questions}
-    ###<a name="Github"></a>Github
+    ### <a name="Github"></a>Github
     ${answers.github}
     `;
 }
