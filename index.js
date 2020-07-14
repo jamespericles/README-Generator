@@ -27,7 +27,7 @@ function promptUser() {
       type: "input",
       name: "screenshots",
       message:
-        "Please enter any URLs for screenshots relevant to this project, or type <skip>.",
+        "Please enter any URLs for screenshots relevant to this project, or type <skip>. If you type <skip>, that portion of the document will not generate.",
     },
     {
       type: "input",
@@ -42,7 +42,8 @@ function promptUser() {
     {
       type: "list",
       name: "license",
-      message: "Which License would you like to use?",
+      message:
+        "Which License would you like to use? If you choose not to include a license, that portion of the document will not generate.",
       choices: ["MIT", "GNU General Public", "Apache", "None"],
     },
     {
@@ -74,6 +75,12 @@ function promptUser() {
 // function to write README file
 
 function generateREADME(answers) {
+  let showScreenshots = answers.screenshots !== "<skip>" || "skip" || "";
+
+  if (answers.screenshots === "<skip>" || "skip" || "") {
+    answers.screenshots = "";
+  }
+
   if (answers.license === "MIT") {
     answers.license = `MIT License
 
@@ -987,7 +994,7 @@ limitations under the License.`;
 ## Table of Contents
 ---
 ### [Description](#Description)
-### [Screenshots](#Screenshots)
+${showScreenshots ? "### [Screenshots](#Screenshots)" : ""}
 ### [Installation](#Installation)
 ### [Usage](#Usage)
 ${showLicense ? "### [License](#License)" : ""}
@@ -998,14 +1005,13 @@ ${showLicense ? "### [License](#License)" : ""}
 ---
 ### <a name="Description"></a>Description
 ${answers.description}
-### <a name="Screenshots"></a>Screenshots
+${showScreenshots ? '### <a name="Screenshots"></a>Screenshots' : ""}
 ${answers.screenshots}
 ### <a name="Installation"></a>Installation
 ${answers.installation}
 ### <a name="Usage"></a>Usage
 ${answers.usage}
-
-${showLicense ? "### <a name='License'></a>License" : ""}
+${showLicense ? '### <a name="License"></a>License' : ""}
 ${answers.license}
 ### <a name="Contributing"></a>Contributing
 ${answers.contributing}
@@ -1027,7 +1033,7 @@ async function init() {
     await writeFileAsync("README.md", README);
 
     console.log("Successfully wrote to README.md");
-    // console.log(answers);
+    console.log(answers.screenshots);
   } catch (err) {
     console.log(err);
   }
@@ -1035,4 +1041,3 @@ async function init() {
 
 // function call to initialize program
 init();
-// ### <a name="License"></a>License
