@@ -21,14 +21,14 @@ t
 ### <a name="Usage"></a>Usage
 t
 ### <a name="License"></a>License
-                    GNU GENERAL PUBLIC LICENSE
-    Version 3, 29 June 2007
+GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
 
 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
 Everyone is permitted to copy and distribute verbatim copies
 of this license document, but changing it is not allowed.
 
-         Preamble
+Preamble
 
 The GNU General Public License is a free, copyleft license for
 software and other kinds of works.
@@ -91,7 +91,7 @@ patents cannot be used to render the program non-free.
 The precise terms and conditions for copying, distribution and
 modification follow.
 
-    TERMS AND CONDITIONS
+TERMS AND CONDITIONS
 
 0. Definitions.
 
@@ -196,7 +196,7 @@ and control, on terms that prohibit them from making any copies of
 your copyrighted material outside their relationship with you.
 
 Conveying under any other circumstances is permitted solely under
-the conditions stated below.  Sublicensing is not allowed; section 10
+the conditions stated below. Sublicensing is not allowed; section 10
 makes it unnecessary.
 
 3. Protecting Users' Legal Rights From Anti-Circumvention Law.
