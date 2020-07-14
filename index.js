@@ -88,8 +88,7 @@ function generateREADME(answers) {
     answers.license =
       "Please contact me for information regarding licensing this software.";
   }
-  return `
-    # ${answers.projectTitle}
+  return `# ${answers.projectTitle}
     ---
     ## Table of Contents
     ---
@@ -120,8 +119,7 @@ function generateREADME(answers) {
     ### <a name="Questions"></a>Questions
     ${answers.questions}
     ### <a name="Github"></a>Github
-    ${answers.github}
-    `;
+    ${answers.github}`;
 }
 
 // function to initialize program
@@ -134,8 +132,7 @@ async function init() {
     await writeFileAsync("README.md", README);
 
     console.log("Successfully wrote to README.md");
-    console.log(answers);
-    console.log(typeof answers.license);
+    // console.log(answers);
   } catch (err) {
     console.log(err);
   }
