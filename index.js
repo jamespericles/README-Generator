@@ -956,10 +956,13 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.`;
   }
+  let showLicense = answers.license !== "None";
+
   if (answers.license === "None") {
     answers.license =
       "Please contact me for information regarding licensing this software.";
   }
+
   return `# ${answers.projectTitle}
 ---
 ## Table of Contents
@@ -968,7 +971,7 @@ limitations under the License.`;
 ### [Screenshots](#Screenshots)
 ### [Installation](#Installation)
 ### [Usage](#Usage)
-### [License](#License)
+${showLicense ? "### [License](#License)" : ""}
 ### [Contributing](#Contributing)
 ### [Tests](#Tests)
 ### [Questions](#Questions)
@@ -982,8 +985,8 @@ ${answers.screenshots}
 ${answers.installation}
 ### <a name="Usage"></a>Usage
 ${answers.usage}
-### <a name="License"></a>License
-${answers.license}
+
+${showLicense ? "### <a name='License'></a>License" : ""}
 ### <a name="Contributing"></a>Contributing
 ${answers.contributing}
 ### <a name="Tests"></a>Tests
@@ -1012,3 +1015,4 @@ async function init() {
 
 // function call to initialize program
 init();
+// ### <a name="License"></a>License
