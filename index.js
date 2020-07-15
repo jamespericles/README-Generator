@@ -1044,8 +1044,7 @@ async function init() {
 
     await writeFileAsync("README.md", README);
 
-    console.log("Successfully wrote to README.md");
-    console.log(answers.screenshots);
+    console.log("Successfully wrote to README.md.");
   } catch (err) {
     console.log(err);
   }
