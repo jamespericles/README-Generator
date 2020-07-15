@@ -4,7 +4,7 @@ const util = require("util");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// array of questions for user
+// Array of questions for user
 function promptUser() {
   return inquirer.prompt([
     { type: "input", name: "name", message: "Please enter your name." },
@@ -75,6 +75,7 @@ function promptUser() {
 // function to write README file
 
 function generateREADME(answers) {
+  // Logic for if the user declares they don't want to include screenshots in their README
   let showScreenshots = answers.screenshots !== "<skip>";
 
   if (answers.screenshots === "<skip>") {
@@ -983,6 +984,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.`;
   }
+  // Logic for if the user declares they don't want to include a license in their README
   let showLicense = answers.license !== "None";
 
   if (answers.license === "None") {
@@ -1022,6 +1024,8 @@ ${answers.questions}
 ### <a name="Github"></a>Github
 ${answers.github}`;
 }
+// Lines 999 and 1002 are ternary operators affecting whether or not to have a screenshot and license section upon README generation
+// Lines 1010 and 1016 are ternary operators functioning similarly to lines 999 and 1002
 
 // function to initialize program
 async function init() {
