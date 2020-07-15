@@ -82,7 +82,11 @@ function generateREADME(answers) {
     answers.screenshots = "";
   }
 
+  let badge = "";
+
   if (answers.license === "MIT") {
+    badge =
+      "[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)";
     answers.license = `MIT License
 
 Copyright (c) ${answers.year} ${answers.name}
@@ -106,6 +110,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.`;
   }
   if (answers.license === "GNU General Public") {
+    badge =
+      "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
     answers.license = `GNU GENERAL PUBLIC LICENSE
 Version 3, 29 June 2007
 
@@ -782,6 +788,8 @@ Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.`;
   }
   if (answers.license === "Apache") {
+    badge =
+      "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
     answers.license = `Apache License
 Version 2.0, January 2004
 http://www.apache.org/licenses/
@@ -991,7 +999,7 @@ limitations under the License.`;
     answers.license = "";
   }
 
-  return `# ${answers.projectTitle}
+  return `# ${answers.projectTitle}${badge}
 ---
 ## Table of Contents
 ---
