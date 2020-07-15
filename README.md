@@ -1,4 +1,4 @@
-# README-Generator[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+# README-Generator [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
 ---
 
@@ -34,7 +34,7 @@ This application generates a README.md file from the terminal. Node is required 
 
 https://github.com/jamespericles/README-Generator/blob/master/Screenshots/Prompts_used_to_generate.png
 
-https://youtu.be/mOrQN1apXFE
+This video showcases the project in action: https://youtu.be/mOrQN1apXFE
 
 ### <a name="Installation"></a>Installation
 
@@ -82,4 +82,4 @@ I can be reached at james.pericles@aol.com with any questions.
 
 ### <a name="Github"></a>Github
 
-github.com/jamespericles, https://github.com/jamespericles/README-Generator
+https://github.com/jamespericles, https://github.com/jamespericles/README-Generator
