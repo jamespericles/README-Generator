@@ -75,9 +75,9 @@ function promptUser() {
 // function to write README file
 
 function generateREADME(answers) {
-  let showScreenshots = answers.screenshots !== "<skip>" || "skip" || "";
+  let showScreenshots = answers.screenshots !== "<skip>";
 
-  if (answers.screenshots === "<skip>" || "skip" || "") {
+  if (answers.screenshots === "<skip>") {
     answers.screenshots = "";
   }
 
