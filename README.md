@@ -1,4 +1,4 @@
-# t[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+# README-Generator[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 ---
 ## Table of Contents
 ---
@@ -13,17 +13,17 @@
 ### [Github](#Github)
 ---
 ### <a name="Description"></a>Description
-t
+This application generates a README.md file from the terminal. Node is required to run this application. Typing ```node index.js``` from the terminal prompts the user with several questions related to their project. The application then takes the inputs from the user and appends them to the proper location within the README. The document also includes a table of contents with functioning links. The user is also able to select from three licenses, which will add the appropriate badge and license information. The application is also smart enough to know to delete the license section and the screenshot section if the user chooses to skip either, through the implementation of turnary functions.
 ### <a name="Screenshots"></a>Screenshots
-t
+
 ### <a name="Installation"></a>Installation
-t
+Node needs to be installed to run index.js from the console.
 ### <a name="Usage"></a>Usage
-t
+This project helps developers by prompting them with several different questions related to their project, and then formatting the information it receives into a quality README. This helps speed up the README writing process so that the developer can more quickly move on to actually writing out their work.
 ### <a name="License"></a>License
 MIT License
 
-Copyright (c) 2020 t
+Copyright (c) 2020 James Pericles
     
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -43,10 +43,10 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ### <a name="Contributing"></a>Contributing
-t
+Per the license, anyone is welcome to iterate on it. 
 ### <a name="Tests"></a>Tests
-t
+Upon completion of each task, I generated a new README using the application to ensure that everything was functioning as planned.
 ### <a name="Questions"></a>Questions
-t
+james.pericles@aol.com
 ### <a name="Github"></a>Github
-t
+github.com/jamespericles, https://github.com/jamespericles/README-Generator
