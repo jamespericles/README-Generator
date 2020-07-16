@@ -1041,8 +1041,8 @@ async function init() {
     const answers = await promptUser();
 
     const README = generateREADME(answers);
-
-    await writeFileAsync("README.md", README);
+    // Rather than writing to the root of the file and overwriting this projects README, user's documents are written to their own folder
+    await writeFileAsync("./READMElocation/README.md", README);
 
     console.log("Successfully wrote to README.md.");
   } catch (err) {
