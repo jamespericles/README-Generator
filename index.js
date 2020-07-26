@@ -1036,13 +1036,19 @@ ${answers.github}`;
 // Lines 1010 and 1016 are ternary operators functioning similarly to lines 999 and 1002
 
 // function to initialize program
+
+const OUTPUT_DIR = path.resolve(__dirname, "output");
+const outputPath = path.join(OUTPUT_DIR, "README.md");
+
 async function init() {
   try {
     const answers = await promptUser();
 
     const README = generateREADME(answers);
-    // Rather than writing to the root of the file and overwriting this projects README, user's documents are written to their own folder
-    await writeFileAsync("./READMElocation/README.md", README);
+    if (fs.existsSync(OUTPUT_DIR)) {
+      console.log("Pathway exists, read for generation");
+    } else fs.mkdirSync(OUTPUT_DIR);
+    await writeFileAsync(outputPath, README);
 
     console.log("Successfully wrote to README.md.");
   } catch (err) {
