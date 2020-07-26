@@ -30,6 +30,10 @@
 
 This application generates a README.md file from the terminal. Node is required to run this application. Typing `node index.js` from the terminal prompts the user with several questions related to their project. The application then takes the inputs from the user and appends them to the proper location within the README. The document also includes a table of contents with functioning links. The user is also able to select from three licenses, which will add the appropriate badge and license information. The application is also smart enough to know to delete the license section and the screenshot section if the user chooses to skip either, through the implementation of ternary functions. In-fact, I used this application to write this README file you're currently viewing.
 
+Cool things to note, the app will check if you have a folder in this directory called `output`, and if you don't, it will generate one for you and save your `README` file there!
+
+Also keep in mind, if you generate a `README` and leave it there after generating another file, the first one will be overwritten.
+
 ### <a name="Screenshots"></a>Screenshots
 
 https://github.com/jamespericles/README-Generator/blob/master/Screenshots/Prompts_used_to_generate.png
