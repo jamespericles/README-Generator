@@ -1009,7 +1009,7 @@ limitations under the License.`;
     answers.license = "";
   }
 
-  return `# ${answers.projectTitle}${badge}
+  return `# ${answers.projectTitle} ${badge}
 ---
 ## Table of Contents
 ---
