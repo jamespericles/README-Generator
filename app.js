@@ -1056,7 +1056,7 @@ async function init() {
 
     const README = generateREADME(answers);
     if (fs.existsSync(OUTPUT_DIR)) {
-      console.log("Pathway exists, read for generation");
+      console.log("Pathway exists, ready for generation");
     } else fs.mkdirSync(OUTPUT_DIR);
     await writeFileAsync(outputPath, README);
 
