@@ -104,4 +104,4 @@ I can be reached at james.pericles@aol.com with any questions.
 
 ### <a name="Github"></a>Github
 
-https://github.com/jamespericles, https://github.com/jamespericles/README-Generator
+[My github homepage](https://github.com/jamespericles), [this projects repository homepage](https://github.com/jamespericles/README-Generator)
