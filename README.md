@@ -38,11 +38,11 @@ Also keep in mind, if you generate a `README` and leave it there after generatin
 
 https://github.com/jamespericles/README-Generator/blob/master/Screenshots/Prompts_used_to_generate.png
 
-This video showcases the project in action: https://youtu.be/mOrQN1apXFE
+This video showcases the project in action (here)[https://youtu.be/mOrQN1apXFE]
 
 ### <a name="Installation"></a>Installation
 
-Node needs to be installed to run index.js from the console.
+Node needs to be installed to run app.js from the console. After cloning the repo to your machine, run `npm i` from the terminal to install all dependencies. Afterwards use `node app.js` in order to start the application from the console.
 
 ### <a name="Usage"></a>Usage
 
