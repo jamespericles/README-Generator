@@ -6,7 +6,7 @@ const path = require("path");
 const writeFileAsync = util.promisify(fs.writeFile);
 
 // Function to validate for phone numbers
-const validatePhoneNumber = async (input) => {
+const validateNumber = async (input) => {
   if (isNaN(input) == true) {
     return "Please input a number, or press return to skip (this is appended to the license)";
   }
@@ -21,7 +21,7 @@ function promptUser() {
       type: "input",
       name: "year",
       message: "What year did you complete this project?",
-      validate: validatePhoneNumber,
+      validate: validateNumber,
     },
     {
       type: "input",
