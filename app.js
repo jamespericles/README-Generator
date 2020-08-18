@@ -1040,7 +1040,7 @@ ${answers.tests}
 ### <a name="Questions"></a>Questions
 ${answers.questions}
 ### <a name="Github"></a>Github
-${"https://" + answers.github}`;
+${"This project can be found (here)[https://" + answers.github + "]"}`;
 }
 // Lines 999 and 1002 are ternary operators affecting whether or not to have a screenshot and license section upon README generation
 // Lines 1010 and 1016 are ternary operators functioning similarly to lines 999 and 1002
