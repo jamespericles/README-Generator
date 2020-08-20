@@ -64,7 +64,7 @@ The user is asked the following questions related to the README document they wo
   8. `If you would like people to contribute to your work, please explain how they can do that.` 
   9. `Please describe any tests you conducted and their results.` This question made not be prudent to most projects, but larger scale projects taking advantage of `npm test`, those results and or explanations on how to build on those tests belong here.
   10. `Please provide your email for questions related to the project.` This is handy for people to contact you if they have questions related to the project, the license you chose or how they can extend upon the project.
-  11. `Please enter your github username or repository URL for this project...` Entering either the repository URL or your own github homepage URL is handy to show others your work. The generator will append `https://` to whatever your response is so no need to include it. 
+  11. `Please enter your github username or repository URL for this project...` Entering either the repository URL or your own github homepage URL is handy to show others your work. The generator will output: This project can be found [here](https://github.com/jamespericles/README-Generator), using your own link, of course. 
 
 ### <a name="License"></a>License
 
