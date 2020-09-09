@@ -37,7 +37,7 @@ function promptUser() {
       type: "input",
       name: "screenshots",
       message:
-        "Please enter any URLs for screenshots relevant to this project, or type <skip>. If you type <skip>, that portion of the document will not generate.",
+        "Please enter any URLs for screenshots relevant to this project, or type <skip> to delete this section of the document.",
     },
     {
       type: "input",
@@ -65,7 +65,8 @@ function promptUser() {
     {
       type: "input",
       name: "tests",
-      message: "Please describe any tests you conducted and their results.",
+      message:
+        "Please describe any tests you conducted and their results or type <skip> to delete this section of the document.",
     },
     {
       type: "input",
