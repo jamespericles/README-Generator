@@ -1008,7 +1008,12 @@ limitations under the License.`;
   if (answers.license === "None") {
     answers.license = "";
   }
+  // Logic for is the user declares they don't want to include the testing portion in their README
+  let showTests = answers.tests !== "<skip>";
 
+  if (answers.tests === "<skip>") {
+    answers.tests = "";
+  }
   return `# ${answers.projectTitle} ${badge}
 ---
 ## Table of Contents
@@ -1019,7 +1024,7 @@ ${showScreenshots ? "### [Screenshots](#Screenshots)" : ""}
 ### [Usage](#Usage)
 ${showLicense ? "### [License](#License)" : ""}
 ### [Contributing](#Contributing)
-### [Tests](#Tests)
+${showTests ? "### [Tests](#Tests)" : ""}
 ### [Questions](#Questions)
 ### [Github](#Github)
 ---
@@ -1035,7 +1040,7 @@ ${showLicense ? '### <a name="License"></a>License' : ""}
 ${answers.license}
 ### <a name="Contributing"></a>Contributing
 ${answers.contributing}
-### <a name="Tests"></a>Tests
+${showTests ? '### <a name="Tests"></a>Tests' : ""}
 ${answers.tests}
 ### <a name="Questions"></a>Questions
 ${answers.questions}
