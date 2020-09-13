@@ -100,7 +100,7 @@ Upon completion of each task, I generated a new README using the application to 
 
 ### <a name="Questions"></a>Questions
 
-I can be reached at james.pericles@aol.com with any questions.
+I can be reached at jamesspericles@gmail.com with any questions regarding this project.
 
 ### <a name="Github"></a>Github
 
