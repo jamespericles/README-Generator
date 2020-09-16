@@ -78,7 +78,7 @@ function promptUser() {
       type: "input",
       name: "github",
       message:
-        "Please enter your github username or repository URL for this project omitting <https://> which  is generated for you.",
+        "Please enter the repository URL for this project omitting <https://github.com/> which  is generated for you.",
     },
   ]);
 }
@@ -1046,7 +1046,9 @@ ${answers.tests}
 ### <a name="Questions"></a>Questions
 ${answers.questions}
 ### <a name="Github"></a>Github
-${"This project can be found [here](https://" + answers.github + ")"}`;
+${
+  "This project can be found [here](https://github.com/" + answers.github + ")"
+}`;
 }
 // Lines 999 and 1002 are ternary operators affecting whether or not to have a screenshot and license section upon README generation
 // Lines 1010 and 1016 are ternary operators functioning similarly to lines 999 and 1002
