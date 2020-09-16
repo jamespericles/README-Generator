@@ -40,7 +40,7 @@ Within the `Usage` section of this document there is a detailed step by step exp
 
 ### <a name="Screenshots"></a>Screenshots
 
-https://github.com/jamespericles/README-Generator/blob/master/Screenshots/Prompts_used_to_generate.png
+![Prompts_used_to_generate](https://github.com/jamespericles/README-Generator/blob/master/Screenshots/Prompts_used_to_generate.png)
 
 This video showcases the project in action [here](https://youtu.be/mOrQN1apXFE)
 
